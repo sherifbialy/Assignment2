@@ -8,12 +8,17 @@ body{
 }
 h1{
     color: white;
+    text-align: center;
 }
 label{
     color: white;
+    text-align: center;
+
 }
 p{
     color: white;
+    text-align: center;
+
 }
 #wordForm{
     background-color: chocolate;
@@ -21,7 +26,7 @@ p{
 }
 
 #btn{
-    margin: 0 auto;
+    margin-inline: auto;
 }
 span{
     background-color: green;
