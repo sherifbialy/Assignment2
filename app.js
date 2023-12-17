@@ -11,13 +11,13 @@
    
    
     let input=x.innerText;
-    console.log(input);
+   
     let wordArr=input.split(/\s+/);
     
 
    
    wordArr=wordArr.filter(element => element.length>0);
-   console.log(wordArr);
+  
   
    
     wordArr.forEach(element => {
@@ -34,7 +34,7 @@
    
     
     
-    let newText=""
+    
 
         
     newText = input.replace(new RegExp(longestWord, "g"), `<span>${longestWord}</span>`);
