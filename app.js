@@ -12,7 +12,7 @@
    
     let input=x.innerText;
     console.log(input);
-    let wordArr=input.split(" ");
+    let wordArr=input.split(/\s+/);
     
 
    
@@ -24,8 +24,8 @@
         if(element!=" " || element!=""){
             //console.log(wordArr);
            counter++; 
-          if(element.split("").length>longestWordLength){
-            longestWordLength=element.split("").length;
+          if(element.length>longestWordLength){
+            longestWordLength=element.length;
             longestWord=element;
           }
         }
@@ -35,14 +35,16 @@
     
     
     let newText=""
-    if(longestWord!="&nbsp;"){
-        newText = input.replace(new RegExp(longestWord, "g"), `<span>${longestWord}</span>`);
-    }
+
+        
+    newText = input.replace(new RegExp(longestWord, "g"), `<span>${longestWord}</span>`);
     
-    // if(longestWord==wordArr[wordArr.length-1]){
-    //     newText+="&nbsp;";
-    // }
+    if(longestWord==wordArr[wordArr.length-1]){
+      newText+="&nbsp;";
+  }
+    
     x.innerHTML=newText;
+    
     let y=document.getElementById('word-count');
     y.innerHTML=`Your word count is ${counter}`;
 
